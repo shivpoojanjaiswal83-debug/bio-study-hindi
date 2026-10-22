@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#14532d">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.gstatic.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src https://*.googleapis.com https://*.firebaseio.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com; object-src 'none'; base-uri 'none'; frame-ancestors 'none';">
+<title>Bio Study Hindi Secure</title><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><h1>🧬 Bio Study Hindi</h1><p>सुरक्षित Biology नोट्स और MCQ</p></header>
+<main>
+<section class="card" id="configNotice"><b>सेटअप बाकी है</b><p>इस ऐप को चालू करने के लिए README_HINDI.txt में दिए गए Firebase सेटअप के चरण पूरे करें और <code>firebase-config.js</code> में अपनी config डालें।</p></section>
+<section class="card" id="authCard">
+<h2>लॉगिन / नया खाता</h2>
+<label for="email">ईमेल</label><input id="email" type="email" autocomplete="email" placeholder="आपका ईमेल">
+<label for="password">पासवर्ड (कम से कम 12 अक्षर सुझाए गए)</label><input id="password" type="password" autocomplete="current-password" minlength="6" placeholder="मजबूत पासवर्ड">
+<div class="row"><button id="signup">नया खाता बनाएँ</button><button id="login" class="secondary">लॉगिन</button></div>
+<p id="authMsg" class="muted" role="status"></p>
+</section>
+<section id="app" class="hidden">
+<div class="card row spread"><div><b id="who"></b><p class="muted">आपका डेटा आपके खाते से जुड़ा है।</p></div><button id="logout" class="secondary">लॉगआउट</button></div>
+<nav><button data-tab="notes">नोट्स</button><button data-tab="questions">MCQ</button><button data-tab="backup">बैकअप</button></nav>
+<section class="card" id="notes">
+<h2>नोट्स</h2><label for="noteTitle">शीर्षक / अध्याय</label><input id="noteTitle" placeholder="जैसे: कोशिका">
+<label for="noteBody">नोट्स</label><textarea id="noteBody" placeholder="अपने नोट्स लिखें"></textarea><button id="saveNote">नोट सेव करें</button><div id="noteList"></div>
+</section>
+<section class="card hidden" id="questions">
+<h2>MCQ जोड़ें</h2><label for="qText">प्रश्न</label><textarea id="qText"></textarea>
+<div class="row"><div><label for="o0">विकल्प A</label><input id="o0"></div><div><label for="o1">विकल्प B</label><input id="o1"></div></div>
+<div class="row"><div><label for="o2">विकल्प C</label><input id="o2"></div><div><label for="o3">विकल्प D</label><input id="o3"></div></div>
+<label for="correct">सही विकल्प</label><select id="correct"><option value="0">A</option><option value="1">B</option><option value="2">C</option><option value="3">D</option></select>
+<label for="explanation">व्याख्या (वैकल्पिक)</label><textarea id="explanation"></textarea><button id="saveQuestion">MCQ सेव करें</button><div id="questionList"></div>
+</section>
+<section class="card hidden" id="backup"><h2>डेटा बैकअप</h2><p>अपने नोट्स और प्रश्नों की कॉपी JSON फ़ाइल में डाउनलोड करें। इस फ़ाइल को निजी रखें।</p><button id="export">बैकअप डाउनलोड करें</button><p id="backupMsg" class="muted"></p></section>
+</section>
+<section class="card notice"><b>सुरक्षा नोट</b><p>यह स्टार्टर Firebase Authentication और Firestore नियमों के लिए बनाया गया है। Firebase प्रोजेक्ट सेटअप और सुरक्षा नियम प्रकाशित होने से पहले इसे संवेदनशील डेटा के लिए इस्तेमाल न करें। मजबूत पासवर्ड रखें, ईमेल साझा न करें और नियमित बैकअप लें।</p></section>
+</main>
+<script type="module" src="app.js"></script>
+</body></html>

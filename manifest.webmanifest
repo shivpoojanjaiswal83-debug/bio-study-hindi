@@ -1,0 +1,9 @@
+{
+  "name": "Bio Study Hindi Secure",
+  "short_name": "Bio Study",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f4f7f4",
+  "theme_color": "#14532d",
+  "lang": "hi"
+}
