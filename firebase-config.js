@@ -1,11 +1,9 @@
-// Firebase Console से अपनी Web App config यहाँ डालें.
-// इस फ़ाइल को सार्वजनिक वेबसाइट पर डालने से पहले README के सभी चरण पढ़ें.
-// Firebase client config स्वयं secret नहीं है; Firestore Security Rules अनिवार्य हैं.
+
 export const firebaseConfig = {
-  apiKey: "PASTE_FIREBASE_API_KEY",
-  authDomain: "PASTE_PROJECT_ID.firebaseapp.com",
-  projectId: "PASTE_PROJECT_ID",
-  storageBucket: "PASTE_PROJECT_ID.firebasestorage.app",
-  messagingSenderId: "PASTE_SENDER_ID",
-  appId: "PASTE_APP_ID"
+  apiKey: "AIzaSyDfWISD2R18-FVcqkvrsuA8sxr_yJ3W1Bs",
+  authDomain: "bio-study-hindi.firebaseapp.com",
+  projectId: "bio-study-hindi",
+  storageBucket: "bio-study-hindi.firebasestorage.app",
+  messagingSenderId: "994697015128",
+  appId: "1:994697015128:web:afadbda6a437c13f13ff2d6"
 };
